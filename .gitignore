@@ -1,0 +1,15 @@
+﻿################################################################################
+# 이 .gitignore 파일은 Microsoft(R) Visual Studio에서 자동으로 만들어졌습니다.
+################################################################################
+
+/.vs
+/src/Api/bin/Debug/net8.0
+/src/Api/obj
+/src/Client/bin/Debug/net8.0
+/src/Client/obj
+/src/IdentityServer/bin/Debug/net8.0
+/src/IdentityServer/obj
+/src/IdentityServerAspNetIdentity/bin/Debug/net8.0
+/src/IdentityServerAspNetIdentity/obj
+/src/WebClient/bin/Debug/net8.0
+/src/WebClient/obj
