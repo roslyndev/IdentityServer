@@ -3,13 +3,13 @@
 ################################################################################
 
 /.vs
-/src/Api/bin/Debug/net8.0
+/src/Api/bin
 /src/Api/obj
-/src/Client/bin/Debug/net8.0
+/src/Client/bin
 /src/Client/obj
-/src/IdentityServer/bin/Debug/net8.0
+/src/IdentityServer/bin
 /src/IdentityServer/obj
-/src/IdentityServerAspNetIdentity/bin/Debug/net8.0
+/src/IdentityServerAspNetIdentity/bin
 /src/IdentityServerAspNetIdentity/obj
-/src/WebClient/bin/Debug/net8.0
+/src/WebClient/bin
 /src/WebClient/obj
