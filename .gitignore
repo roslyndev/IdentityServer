@@ -13,8 +13,8 @@
 /src/IdentityServerAspNetIdentity/obj
 /src/WebClient/bin
 /src/WebClient/obj
-/src/JavaScriptClient/bin/Debug/net8.0
+/src/JavaScriptClient/bin
 /src/JavaScriptClient/obj
-/src/SPA/bin/Debug/net8.0
+/src/SPA/bin
 /src/SPA/obj
 /src/SPA/wwwroot/node_modules

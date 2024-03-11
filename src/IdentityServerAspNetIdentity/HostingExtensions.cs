@@ -49,6 +49,17 @@ internal static class HostingExtensions
                 options.ClientSecret = "copy client secret from Google here";
             });
 
+        builder.Services.AddCors(options =>
+        {
+            // this defines a CORS policy called "default"
+            options.AddPolicy("default", policy =>
+            {
+                policy.WithOrigins("https://localhost:5003")
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+            });
+        });
+
         return builder.Build();
     }
     
@@ -60,6 +71,9 @@ internal static class HostingExtensions
         {
             app.UseDeveloperExceptionPage();
         }
+
+        app.UseHttpsRedirection();
+        app.UseCors("default");
 
         app.UseStaticFiles();
         app.UseRouting();

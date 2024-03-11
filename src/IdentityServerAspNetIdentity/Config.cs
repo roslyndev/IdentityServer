@@ -71,6 +71,44 @@ public static class Config
                     "color",
                     "api1"
                 }
+            },
+            new Client
+            {
+                ClientId = "bff",
+                ClientSecrets = { new Secret("secret".Sha256()) },
+
+                AllowedGrantTypes = GrantTypes.Code,
+    
+                // where to redirect to after login
+                RedirectUris = { "https://localhost:5003/signin-oidc" },
+
+                // where to redirect to after logout
+                PostLogoutRedirectUris = { "https://localhost:5003/signout-callback-oidc" },
+
+                AllowedScopes = new List<string>
+                {
+                    IdentityServerConstants.StandardScopes.OpenId,
+                    IdentityServerConstants.StandardScopes.Profile,
+                    "api1"
+                }
+            },
+            new Client
+            {
+                ClientId = "js",
+                ClientName = "JavaScript Client",
+                AllowedGrantTypes = GrantTypes.Code,
+                RequireClientSecret = false,
+
+                RedirectUris =           { "https://localhost:5003/callback.html" },
+                PostLogoutRedirectUris = { "https://localhost:5003/index.html" },
+                AllowedCorsOrigins =     { "https://localhost:5003" },
+
+                AllowedScopes =
+                {
+                    IdentityServerConstants.StandardScopes.OpenId,
+                    IdentityServerConstants.StandardScopes.Profile,
+                    "api1"
+                }
             }
         };
 }
